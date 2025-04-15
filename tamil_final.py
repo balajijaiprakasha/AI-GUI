@@ -19,17 +19,16 @@ def listen():
     with sr.Microphone() as source:
         print("உங்கள் கேள்வியை கேட்கலாம்...")
         recognizer.adjust_for_ambient_noise(source)
-        try:
+        try:    
             audio = recognizer.listen(source, timeout=5)
             text = recognizer.recognize_google(audio, language="ta-IN")
             print("நீங்கள் கூறியது:", text)
             return text
         except sr.UnknownValueError:
-            speak("மன்னிக்கவும், உங்கள் வாக்கியத்தை புரிந்துகொள்ள முடியவில்லை.")
-            return None
+            return "மன்னிக்கவும், உங்கள் வாக்கியத்தை புரிந்துகொள்ள முடியவில்லை."
         except sr.RequestError:
-            speak("மன்னிக்கவும், உங்கள் வாக்கியத்தை செயலாக்க முடியவில்லை.")
-            return None
+            return "மன்னிக்கவும், உங்கள் வாக்கியத்தை செயலாக்க முடியவில்லை."
+            
 
 
 def search_web(query):

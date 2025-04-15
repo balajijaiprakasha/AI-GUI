@@ -1,0 +1,134 @@
+
+body {
+  margin: 0;
+  font-family: 'Noto Sans Tamil', sans-serif;
+  background: linear-gradient(to bottom right, #c3aed6, #fbeaff);
+}
+
+.assistant-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #c3aed6, #fbeaff);
+}
+
+.assistant-card {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  animation: fadeIn 1s ease-in;
+}
+
+.assistant-avatar {
+  height: 240px !important;
+  width: 240px !important;
+  margin: 0 auto 1rem;
+}
+
+.assistant-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #5d3fd3;
+  margin-bottom: 1rem;
+}
+
+.assistant-input {
+  width: 90%;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.assistant-input:focus {
+  border-color: #a78bfa;
+  box-shadow: 0 0 0 2px rgba(167, 139, 250, 0.5);
+}
+
+.assistant-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  color: white;
+}
+
+.btn-text {
+  background-color: #6b46c1;
+}
+
+.btn-text:hover {
+  background-color: #553c9a;
+}
+
+.btn-voice {
+  background-color: #38a169;
+}
+
+.btn-voice:hover {
+  background-color: #2f855a;
+}
+
+.btn-listening {
+  background-color: #e53e3e;
+}
+
+.assistant-response {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f3e8ff;
+  border-left: 4px solid #a855f7;
+  border-radius: 1rem;
+  color: #4c1d95;
+  font-size: 1.1rem;
+  animation: fadeInUp 0.7s ease-in-out;
+  white-space: pre-wrap; /* Preserve line breaks */
+  word-break: break-word; /* Prevent long words from breaking layout */
+  max-height: 200px; /* Adjust this value as needed */
+  overflow-y: auto; /* Add vertical scrolling when content overflows */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
